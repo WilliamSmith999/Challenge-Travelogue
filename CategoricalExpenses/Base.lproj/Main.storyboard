@@ -237,18 +237,31 @@
                                     <!--2017-11-06 14:12:04 +0000-->
                                 </date>
                             </datePicker>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efi-UU-pSU">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="ZzV-ex-p1E">
+                                        <connections>
+                                            <action selector="takePhoto:" destination="Puk-RQ-0VB" id="rFq-u6-z4U"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="efi-UU-pSU" firstAttribute="trailing" secondItem="DbM-wP-n2n" secondAttribute="trailing" id="0ZD-Vy-Bhz"/>
                             <constraint firstItem="dE2-d5-bW5" firstAttribute="leading" secondItem="DbM-wP-n2n" secondAttribute="leading" id="2EN-Ci-n26"/>
                             <constraint firstItem="S93-ds-Ls5" firstAttribute="leading" secondItem="owC-CA-xdr" secondAttribute="trailing" constant="8" id="GLt-49-GUg"/>
                             <constraint firstItem="1a0-s8-LXU" firstAttribute="leading" secondItem="owC-CA-xdr" secondAttribute="leading" id="I5J-s4-sLb"/>
+                            <constraint firstItem="DbM-wP-n2n" firstAttribute="bottom" secondItem="efi-UU-pSU" secondAttribute="bottom" id="OBA-6F-em1"/>
                             <constraint firstItem="DbM-wP-n2n" firstAttribute="trailing" secondItem="S93-ds-Ls5" secondAttribute="trailing" constant="10" id="OBN-w9-nfQ"/>
                             <constraint firstItem="FlJ-AK-Jnz" firstAttribute="centerY" secondItem="1a0-s8-LXU" secondAttribute="centerY" id="Pc4-aa-0ro"/>
                             <constraint firstItem="FlJ-AK-Jnz" firstAttribute="trailing" secondItem="S93-ds-Ls5" secondAttribute="trailing" id="Q1n-cb-7K1"/>
                             <constraint firstItem="FlJ-AK-Jnz" firstAttribute="leading" secondItem="1a0-s8-LXU" secondAttribute="trailing" constant="8" id="VZH-ke-6Sa"/>
                             <constraint firstItem="pfO-Q0-pfm" firstAttribute="trailing" secondItem="1a0-s8-LXU" secondAttribute="trailing" id="aQe-mr-ndA"/>
                             <constraint firstItem="pfO-Q0-pfm" firstAttribute="leading" secondItem="1a0-s8-LXU" secondAttribute="leading" id="br9-UK-OYS"/>
+                            <constraint firstItem="efi-UU-pSU" firstAttribute="leading" secondItem="DbM-wP-n2n" secondAttribute="leading" id="bs2-qm-xOX"/>
                             <constraint firstItem="dE2-d5-bW5" firstAttribute="trailing" secondItem="DbM-wP-n2n" secondAttribute="trailing" id="ffV-Oe-Agh"/>
                             <constraint firstItem="pfO-Q0-pfm" firstAttribute="top" secondItem="FlJ-AK-Jnz" secondAttribute="bottom" constant="8" id="pj5-Mx-OCF"/>
                             <constraint firstItem="FlJ-AK-Jnz" firstAttribute="top" secondItem="S93-ds-Ls5" secondAttribute="bottom" constant="8" id="qTs-Td-rol"/>

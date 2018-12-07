@@ -18,8 +18,10 @@ extension Expense {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var amount: Double
+    @NSManaged public var amount: String?
+    @NSManaged public var desc: String?
     @NSManaged public var rawDate: NSDate?
+    @NSManaged public var rawPhoto: NSObject?
     @NSManaged public var catagory: Catagories?
 
 }

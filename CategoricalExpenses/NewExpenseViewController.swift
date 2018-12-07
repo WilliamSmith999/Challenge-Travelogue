@@ -54,10 +54,10 @@ class NewExpenseViewController: UIViewController, UINavigationControllerDelegate
     @IBAction func saveExpense(_ sender: Any) {
         let name = nameTextField.text ?? ""
         let date = datePicker.date
-        let amountText = amountTextField.text ?? ""
-        let amount = Double(amountText) ?? 0.0
+        let amount = "1.0"
+        let desc = amountTextField.text ?? ""
         
-        if let expense = Expense(name: name, amount: amount, date: date){
+        if let expense = Expense(name: name, amount: amount, date: date, desc: desc){
             category?.addToRawExpenses(expense)
             do {
                try expense.managedObjectContext?.save()

@@ -20,7 +20,7 @@ public class Expense: NSManagedObject {
             rawDate = newValue as NSDate?
         }
     }
-    convenience init?(name: String, amount: Double, date: Date?) {
+    convenience init?(name: String, amount: String, date: Date?, desc: String?) {
         let appDeligate = UIApplication.shared.delegate as? AppDelegate
         guard let context = appDeligate?.persistentContainer.viewContext
             else{
@@ -30,6 +30,7 @@ public class Expense: NSManagedObject {
         self.name = name
         self.date = date
         self.amount = amount
+        self.desc = desc
         
     }
 }
