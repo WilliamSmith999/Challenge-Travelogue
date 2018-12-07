@@ -8,11 +8,12 @@
 
 import UIKit
 
-class NewExpenseViewController: UIViewController {
+class NewExpenseViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
+    let imagePicker =  UIImagePickerController()
     
     var category: Catagories?
     
@@ -22,6 +23,22 @@ class NewExpenseViewController: UIViewController {
         nameTextField.delegate = self
         amountTextField.delegate = self
         
+    }
+    
+    @IBAction func takePhoto(_ sender: Any) {
+        if (UIImagePickerController.isSourceTypeAvailable(.camera)){
+            imagePicker.sourceType = .camera
+            imagePicker.allowsEditing = true
+            imagePicker.delegate = self
+            self.present(imagePicker, animated: true, completion: nil)
+            
+        }else{
+            print("there is no camera")
+            let alert = UIAlertController(title: "No camera found?", message: "Sorry action aborted", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
     }
 
     override func didReceiveMemoryWarning() {
